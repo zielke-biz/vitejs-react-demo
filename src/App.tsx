@@ -1,22 +1,24 @@
 import { useState } from 'react'
 import './App.css'
+import Avatar from './Avatar'
 
 function App() {
   const [count, setCount] = useState(0)
 
+  console.log(import.meta.env.VITE_PUBLIC_URL)
   return (
     <>
-      <h1>Vite + React</h1>
-      <div className="card">
+      <h1>Avatar List</h1>
+      <div className="mainContent">
         <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+          created {count} avatars
         </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+        <div>
+          <Avatar/>
+        </div>
       </div>
       <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+        Click to regenerate some avatars.
       </p>
     </>
   )
